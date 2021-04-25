@@ -1,6 +1,9 @@
 target/
 .idea/
-report/
 *.iml
 *.class
 user.json
+.classpath
+.vscode/
+.settings/
+.project

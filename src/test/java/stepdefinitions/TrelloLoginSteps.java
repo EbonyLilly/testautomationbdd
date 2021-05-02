@@ -1,6 +1,10 @@
 package stepdefinitions;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -22,7 +26,7 @@ public class TrelloLoginSteps {
 
     }
 
-    @Given("^User clicks on login link$")
+    @And("^User clicks on login link$")
     public void user_clicks_on_login_link() {
         By loc_login_link = By.linkText("Log in");
         WebElement loginLinkElem = Hooks.driver().findElement(loc_login_link);
@@ -30,7 +34,7 @@ public class TrelloLoginSteps {
 
     }
 
-    @Given("^User is on login page$")
+    @When("^User is on login page$")
     public void user_is_on_login_page() {
         By loc_page_banner = By.xpath("//h1[text()='Log in to Trello']");
         WebElement pageBannerElem = Hooks.driver().findElement(loc_page_banner);
@@ -39,7 +43,7 @@ public class TrelloLoginSteps {
 
     }
 
-    @Given("^User logins with valid credentials$")
+    @And("^User logins with valid credentials$")
     public void user_logins_with_valid_credentials() {
         By loc_email = By.id("user");
         By loc_password = By.id("password");
@@ -50,7 +54,7 @@ public class TrelloLoginSteps {
         loginBttn.click();
     }
 
-    @Given("^User should be able to see Trello boards page$")
+    @Then("^User should be able to see Trello boards page$")
     public void user_should_be_able_to_see_Trello_boards_page() {
         pause(3);
         By loc_page_banner = By.xpath("//h3[text()='Trello workspace']");
@@ -59,4 +63,13 @@ public class TrelloLoginSteps {
         Assert.assertTrue(isVisible);
 
     }
+
+    @When("^User logins with invalid credentials$")
+    public void user_logins_with_invalid_credentials() {
+    }
+
+    @Then("^User should be able to see error message$")
+    public void user_should_be_able_to_see_error_message(){
+    }
+
 }

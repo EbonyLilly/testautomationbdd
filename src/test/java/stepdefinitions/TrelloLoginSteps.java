@@ -5,6 +5,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
+import com.github.javafaker.Faker;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -52,8 +54,7 @@ public class TrelloLoginSteps {
         WebElement passwordInput = Hooks.driver().findElement(loc_password);
         WebElement loginBttn = Hooks.driver().findElement(loc_log_bttn);
         emailInput.sendKeys("nijatmn@gmail.com");
-        passInput.sendKeys("pubg!max");
-        WebElement loginBttn = Hooks.driver().findElement(loc_log_bttn);
+        passwordInput.sendKeys("pubg!max");
         loginBttn.click();
     }
 

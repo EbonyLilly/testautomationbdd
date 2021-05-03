@@ -1,12 +1,12 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
         "before": [
           {
             "result": {
-              "duration": 1609932369,
+              "duration": 2034120348,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 13,
-        "name": "User cannot login to Trello with invalid credentials",
+        "line": 3,
+        "name": "Verified user can enter emai and password",
         "description": "",
-        "id": "trello-login-functionality;user-cannot-login-to-trello-with-invalid-credentials",
+        "id": ":-trello-credentialo-logics;verified-user-can-enter-emai-and-password",
         "after": [
           {
             "result": {
-              "duration": 90313014,
+              "duration": 146723437,
               "status": "passed"
             },
             "match": {
@@ -34,10 +34,10 @@
         "steps": [
           {
             "result": {
-              "duration": 1386423314,
+              "duration": 1058314192,
               "status": "passed"
             },
-            "line": 14,
+            "line": 4,
             "name": "User goes to the Trello home page",
             "match": {
               "location": "TrelloLoginSteps.user_goes_to_the_Trello_home_page()"
@@ -46,71 +46,88 @@
           },
           {
             "result": {
-              "duration": 51294331,
+              "duration": 3358818413,
               "status": "passed"
             },
-            "line": 15,
-            "name": "User clicks on login link",
+            "line": 5,
+            "name": "user goes to the Sign up page",
             "match": {
-              "location": "TrelloLoginSteps.user_clicks_on_login_link()"
+              "location": "TrelloCredentialsStep.user_goes_to_the_Sign_up_page()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 943800176,
+              "duration": 2051080132,
               "status": "passed"
             },
-            "line": 16,
-            "name": "User is on login page",
+            "line": 6,
+            "name": "user clicks on login link",
             "match": {
-              "location": "TrelloLoginSteps.user_is_on_login_page()"
+              "location": "TrelloCredentialsStep.user_clicks_on_login_link()"
             },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6610941917,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user enters email and password for verified users",
+            "match": {
+              "location": "TrelloCredentialsStep.user_enters_email_and_password_for_verified_users(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "nijatmn1@gmail.com",
+                  "pass123!"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "nijatmn2@gmail.com",
+                  "pass900!"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "ebony9@gmail.com",
+                  "pass100!"
+                ],
+                "line": 10
+              }
+            ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 19386,
+              "duration": 33070438,
               "status": "passed"
             },
-            "line": 17,
-            "name": "User logins with invalid credentials",
+            "line": 11,
+            "name": "user should not see any error",
             "match": {
-              "location": "TrelloLoginSteps.user_logins_with_invalid_credentials()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 16753,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "User should be able to see error message",
-            "match": {
-              "location": "TrelloLoginSteps.user_should_be_able_to_see_error_message()"
+              "location": "TrelloCredentialsStep.user_should_not_see_any_error()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "line": 12,
-            "name": "@dev"
+            "line": 2,
+            "name": "@new"
           }
         ]
       }
     ],
-    "name": "Trello login functionality",
+    "name": ": Trello credentialo logics",
     "description": "",
-    "id": "trello-login-functionality",
+    "id": ":-trello-credentialo-logics",
     "keyword": "Feature",
-    "uri": "trello_login.feature",
-    "tags": [
-      {
-        "line": 1,
-        "name": "@Smoke"
-      }
-    ]
+    "uri": "trelllo_credentails.feature"
   }
 ]
